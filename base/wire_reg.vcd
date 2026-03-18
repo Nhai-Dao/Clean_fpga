@@ -1,0 +1,71 @@
+$date
+	Sat Mar 14 15:32:29 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module wire_reg $end
+$var wire 8 ! sum_wire [7:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 8 # b [7:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % enable $end
+$var reg 1 & rst_n $end
+$var reg 8 ' sum_reg [7:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+0&
+0%
+0$
+b10100 #
+b1010 "
+b11110 !
+$end
+#5
+1$
+#7
+1&
+#10
+0$
+#15
+1$
+#16
+1%
+#20
+0$
+#25
+b11110 '
+1$
+#26
+b1110111 !
+b1100011 "
+0%
+#30
+0$
+#35
+1$
+#36
+1%
+#40
+0$
+#45
+b1110111 '
+1$
+#50
+0$
+#55
+1$
+#60
+0$
+#65
+1$
+#66

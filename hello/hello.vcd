@@ -1,0 +1,51 @@
+$date
+	Sat Mar 14 13:21:45 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module hello $end
+$var reg 8 ! a [7:0] $end
+$var reg 8 " b [7:0] $end
+$var reg 1 # clk $end
+$var reg 8 $ result [7:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx $
+0#
+b10100 "
+b0 !
+$end
+#5
+b10100 $
+b1010 !
+1#
+#10
+0#
+#15
+b101000 $
+b10100 !
+1#
+#20
+0#
+#25
+b11110 !
+1#
+#30
+0#
+#35
+b111100 $
+b101000 !
+1#
+#40
+0#
+#45
+1#
