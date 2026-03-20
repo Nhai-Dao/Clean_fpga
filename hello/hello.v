@@ -1,9 +1,9 @@
 module hello;
 
   reg clk;
-  reg [7:0] a;
-  reg [7:0] b;
-  reg [7:0] result;
+  reg [7:0] addend_a;
+  reg [7:0] addend_b;
+  reg [7:0] sum_result;
 
   // Tạo clock: đảo mỗi 5 đơn vị thời gian
   // → chu kỳ = 10 đơn vị = 100MHz nếu 1 unit = 1ns
@@ -18,21 +18,21 @@ module hello;
 
   // Logic chính
   initial begin
-    a = 8'd0;
-    b = 8'd20;
+    addend_a = 8'd0;
+    addend_b = 8'd20;
 
-    // Chờ vài clock cycle rồi thay đổi a
-    @(posedge clk); a = 8'd10;
-    @(posedge clk); a = 8'd20;
-    @(posedge clk); a = 8'd30;
-    @(posedge clk); a = 8'd40;
+    // Chờ vài clock cycle rồi thay đổi addend_a
+    @(posedge clk); addend_a = 8'd10;
+    @(posedge clk); addend_a = 8'd20;
+    @(posedge clk); addend_a = 8'd30;
+    @(posedge clk); addend_a = 8'd40;
 
     #10 $finish;
   end
 
-  // Tính result mỗi posedge clock
+  // Tính sum_result mỗi posedge clock
   always @(posedge clk) begin
-    result <= a + b;
+    sum_result <= addend_a + addend_b;
   end
 
 endmodule

@@ -1,27 +1,27 @@
-module ass_alw 
+module assign_always;
     reg clk;
     reg rst_n;
     reg enable;
 
-    reg [0:7] a;
-    reg [0:7] b;
-    wire [0:7] sum_wire;
-    reg [0:7] sum_reg;
+    reg [0:7] operand_a;
+    reg [0:7] operand_b;
+    wire [0:7] combinational_sum;
+    reg [0:7] registered_sum;
 
-    assign sum = a + b;
+    assign combinational_sum = operand_a + operand_b;
     
     always @(*) begin
         if(!rst_n)
-            sum_reg = 0;
+            registered_sum = 0;
         else if (enable)
-            sum_reg = a + b;
+            registered_sum = operand_a + operand_b;
     end
 
     always @(posedge clk) begin
         if(!rst_n)
-            sum_reg <= 0;
+            registered_sum <= 0;
         else if (enable) 
-            sum_reg <= a + b;
+            registered_sum <= operand_a + operand_b;
     end
 
 
